@@ -1,0 +1,16 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+Model:
+	entities+=Entity*;
+	
+Entity:
+	"entity" name=ID ("extends" extends=[Entity])? "{"
+		(attributes+=Attribute)*
+	"}"
+;
+
+Attribute:
+	name=ID
+;

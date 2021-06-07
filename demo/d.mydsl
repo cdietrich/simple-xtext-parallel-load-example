@@ -1,0 +1,3 @@
+entity D extends A {
+	
+}
